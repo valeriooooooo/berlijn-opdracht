@@ -15,6 +15,7 @@ Klas 3CSD-WDV2 · Module 9.2 *Berlins Best!* · excursie Berlijn 2–5 november
 - `onderzoek/`: onderzochte locaties en bronnen
 - `ontwerpen/`: ontwerpen van de webpagina
 - `website/`: de webpagina (start: `website/index.html`)
+- `presentatie/`: de presentatie voor dag 3 (PowerPoint, met sprekersnotities)
 
 ## Waarom het Computerspielemuseum? (per criterium)
 | Criterium | Beoordeling |
