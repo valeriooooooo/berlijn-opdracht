@@ -2,7 +2,7 @@
    Berlins Best! – Computerspielemuseum
    Team: Berlijnse Tovernaars (Valerio & Jop)
    - Slideshow: zelf geprogrammeerd (geen library)
-   - Kaart: Leaflet + OpenStreetMap
+   - Kaart: Google Maps (iframe in de HTML)
    ========================================================== */
 
 "use strict";
@@ -162,92 +162,46 @@ function initSlideshow(root) {
   }
 }
 
-/* ---------- Interactieve kaart ---------- */
+/* ---------- Header: actieve sectie in het menu ---------- */
 
-function initMap() {
-  const mapEl = document.getElementById("kaart");
-  const fallback = document.getElementById("kaart-fallback");
-  if (!mapEl) {
+function initHeader() {
+  const header = document.querySelector(".site-header");
+  const links = Array.from(document.querySelectorAll(".page-nav a"));
+
+  // Schaduw onder de header zodra je naar beneden scrolt
+  function onScroll() {
+    header.classList.toggle("is-scrolled", window.scrollY > 10);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  if (!("IntersectionObserver" in window)) {
     return;
   }
 
-  // Als Leaflet niet geladen is (bijv. geen internet), toon dan een link
-  if (typeof window.L === "undefined") {
-    mapEl.hidden = true;
-    fallback.hidden = false;
-    return;
-  }
-
-  const L = window.L;
-  const hotel = [52.5251, 13.3915];
-  const museum = [52.5176, 13.4420];
-
-  // Globale route in vier stukken, elk in de kleur van het vervoermiddel
-  const hackescherMarkt = [52.5226, 13.4024];
-  const alexS = [52.5216, 13.4113];
-  const alexU = [52.5218, 13.4133];
-  const weberwiese = [52.5170, 13.4426];
-
-  const segments = [
-    { // lopen naar S Hackescher Markt
-      points: [hotel, [52.5243, 13.3950], [52.5236, 13.3990], [52.5232, 13.4012], hackescherMarkt],
-      style: { color: "#141414", weight: 5, dashArray: "2 9", lineCap: "round" }
-    },
-    { // S-Bahn naar Alexanderplatz
-      points: [hackescherMarkt, [52.5217, 13.4072], alexS],
-      style: { color: "#008d4f", weight: 7 }
-    },
-    { // overstappen + U5 naar Weberwiese
-      points: [alexS, alexU, [52.5203, 13.4219], [52.5180, 13.4325], weberwiese],
-      style: { color: "#7e5330", weight: 7 }
-    },
-    { // lopen naar het museum
-      points: [weberwiese, museum],
-      style: { color: "#141414", weight: 5, dashArray: "2 9", lineCap: "round" }
-    }
-  ];
-
-  const map = L.map(mapEl, {
-    scrollWheelZoom: false
-  });
-
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bijdragers'
-  }).addTo(map);
-
-  function pin(letter, className) {
-    return L.divIcon({
-      className: "",
-      html: '<span class="map-pin ' + className + '">' + letter + "</span>",
-      iconSize: [30, 30],
-      iconAnchor: [15, 15],
-      popupAnchor: [0, -16]
+  // Markeer de link van de sectie die nu in beeld is
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) {
+        return;
+      }
+      links.forEach(function (link) {
+        const active = link.getAttribute("href") === "#" + entry.target.id;
+        link.classList.toggle("is-active", active);
+        if (active) {
+          link.setAttribute("aria-current", "location");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
     });
-  }
+  }, { rootMargin: "-45% 0px -50% 0px" });
 
-  L.marker(hotel, { icon: pin("H", "map-pin-hotel"), title: "Hotel: Generator Berlin Mitte", alt: "Hotel" })
-    .addTo(map)
-    .bindPopup("<strong>Hotel</strong><br>Generator Berlin Mitte<br>Oranienburger Str. 65");
-
-  L.marker(museum, { icon: pin("M", "map-pin-museum"), title: "Computerspielemuseum", alt: "Museum" })
-    .addTo(map)
-    .bindPopup("<strong>Computerspielemuseum</strong><br>Karl-Marx-Allee 93a<br>Dagelijks 10:00 – 20:00");
-
-  const routeGroup = L.featureGroup();
-  segments.forEach(function (segment) {
-    L.polyline(segment.points, segment.style).addTo(routeGroup);
-  });
-  routeGroup.addTo(map);
-
-  map.fitBounds(routeGroup.getBounds(), { padding: [30, 30] });
-
-  // Scrollen met het muiswiel pas na klikken, zodat je niet "vast" komt te zitten
-  map.on("click", function () {
-    map.scrollWheelZoom.enable();
-  });
-  mapEl.addEventListener("mouseleave", function () {
-    map.scrollWheelZoom.disable();
+  links.forEach(function (link) {
+    const section = document.querySelector(link.getAttribute("href"));
+    if (section) {
+      observer.observe(section);
+    }
   });
 }
 
@@ -255,5 +209,5 @@ function initMap() {
 
 document.addEventListener("DOMContentLoaded", function () {
   initSlideshow(document.getElementById("slideshow"));
-  initMap();
+  initHeader();
 });

@@ -40,7 +40,7 @@ Wat heb ik bijgedragen aan het team?
 - Het "skelet" van de pagina en de CSS-variabelen voor kleuren en lettertypes, zodat Jop dezelfde stijl kon gebruiken.
 
 Wat heb ik van een teamlid geleerd of gekregen?
-- Jop liet zien hoe je met Leaflet een eigen marker (divIcon) maakt, zodat de kaartpinnen bij onze stijl passen. Ook leerde ik hoe je de route in stukken tekent, elk in de kleur van het vervoermiddel (S-Bahn groen, U5 bruin).
+- Jop liet zien hoe je een Google Maps-route insluit met een iframe, zonder API-sleutel, en hoe je een link maakt die de route meteen in de Google Maps-app opent.
 
 Hoe ging de samenwerking? Wat ging goed, wat kan beter?
 - Goed: doordat we in verschillende bestanden/secties werkten, hadden we geen merge-conflicten.

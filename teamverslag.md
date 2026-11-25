@@ -35,7 +35,7 @@
 **Waarom? (per criterium)**
 - **Interessant voor CSD-studenten:** Het museum gaat over de geschiedenis van interactieve software en hardware. Je kunt er klassiekers spelen, van *Pong* tot de *PainStation*. Van alle opties sluit het het best aan bij een softwareopleiding, en ook voor XR- en GD-studenten (interactie, game-art) is het leuk.
 - **Open tussen 2 en 5 november:** Ja, het museum is elke dag open van 10:00 tot 20:00 uur. Het is de enige binnenlocatie op ons lijstje die alle vier dagen open is én 's avonds tot 20:00 open blijft.
-- **Bereikbaar vanaf het hotel:** Ja, ca. 4 km en ongeveer 25 minuten met S-Bahn + U5, met één keer overstappen op Alexanderplatz.
+- **Bereikbaar vanaf het hotel:** Ja, 24 minuten met S-Bahn (vanaf het station naast het hotel) + U5, met één keer overstappen op Brandenburger Tor (bron: Google Maps).
 - **Betaalbaar:** € 8 met studentenkaart. Dat is iets duurder dan de gratis opties, maar goedkoper dan Hamburger Bahnhof.
 - **Genoeg informatie en beeldmateriaal:** Ja, de officiële website heeft alle info en op Wikimedia Commons staan tientallen foto's met een vrije licentie.
 
@@ -82,7 +82,7 @@ Omdat we maar met twee zijn, hebben we de vijf onderdelen samengevoegd tot twee 
 | Slideshow (zelf geprogrammeerd in JavaScript) | Valerio |
 | Omschrijving en motivatie (eigen woorden + bronnen) | Jop |
 | Praktische informatie (adres, openingstijden, kosten) | Jop |
-| Route en interactieve kaart (Leaflet + OpenStreetMap) | Jop |
+| Route en interactieve kaart (Google Maps) | Jop |
 
 **Hoe hebben we de afbeeldingen op elkaar afgestemd?**
 - **Bron/licentie:** alleen foto's van Wikimedia Commons met een vrije licentie (CC BY, CC BY-SA). Per foto noteren we maker en licentie in `onderzoek/` en op de pagina.
@@ -93,7 +93,7 @@ Omdat we maar met twee zijn, hebben we de vijf onderdelen samengevoegd tot twee 
 
 **Stand-up: waar liepen we tegenaan, en wat hebben we afgesproken?**
 - Valerio: de slideshow sprong bij afbeeldingen met een andere hoogte. **Afspraak:** alle foto's 3:2 bijsnijden (zie hierboven) en `aspect-ratio` in CSS gebruiken.
-- Jop: de exacte reistijd verschilt per routeplanner (22–28 min). **Afspraak:** we noemen "ca. 25 minuten" en geven de tijd per stap.
+- Jop: de reistijd en de route verschillen per routeplanner en per tijdstip. **Afspraak:** we gebruiken de snelste route van Google Maps (24 min) en geven de tijd per stap. Op de pagina staat een echte Google Maps-kaart met een knop naar de actuele vertrektijden.
 - Wikimedia gaf soms een fout bij te veel downloads achter elkaar. Rustig één voor één downloaden werkte wel.
 
 ---
