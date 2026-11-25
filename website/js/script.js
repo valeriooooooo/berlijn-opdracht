@@ -205,9 +205,76 @@ function initHeader() {
   });
 }
 
+/* ---------- Live: is het museum nu open? (Berlijnse tijd) ---------- */
+
+function initOpenStatus() {
+  const status = document.getElementById("status");
+  if (!status || !window.Intl) {
+    return;
+  }
+  const text = status.querySelector(".status-text");
+
+  // Openingstijden van het museum (in uren), met de uitzonderingen van de officiële site
+  function hoursFor(day, month) {
+    if (day === 24 && month === 12) {
+      return { open: 10, close: 15 };
+    }
+    if (day === 1 && month === 1) {
+      return { open: 12, close: 20 };
+    }
+    return { open: 10, close: 20 };
+  }
+
+  function berlinNow() {
+    const parts = new Intl.DateTimeFormat("nl-NL", {
+      timeZone: "Europe/Berlin",
+      hour: "2-digit",
+      minute: "2-digit",
+      day: "numeric",
+      month: "numeric",
+      hourCycle: "h23"
+    }).formatToParts(new Date());
+    const get = function (type) {
+      const part = parts.find(function (p) { return p.type === type; });
+      return part ? Number(part.value) : 0;
+    };
+    return { hour: get("hour"), minute: get("minute"), day: get("day"), month: get("month") };
+  }
+
+  function pad(n) {
+    return String(n).padStart(2, "0");
+  }
+
+  function update() {
+    const now = berlinNow();
+    const today = hoursFor(now.day, now.month);
+    const minutes = now.hour * 60 + now.minute;
+    const isOpen = minutes >= today.open * 60 && minutes < today.close * 60;
+    const clock = pad(now.hour) + ":" + pad(now.minute);
+
+    let message;
+    if (isOpen) {
+      message = "Nu open · sluit om " + pad(today.close) + ":00";
+    } else if (minutes < today.open * 60) {
+      message = "Nu gesloten · opent vandaag om " + pad(today.open) + ":00";
+    } else {
+      const tomorrowOpen = (now.day === 31 && now.month === 12) ? 12 : 10;
+      message = "Nu gesloten · opent morgen om " + pad(tomorrowOpen) + ":00";
+    }
+
+    text.textContent = message + " (Berlijn " + clock + ")";
+    status.classList.toggle("is-open", isOpen);
+    status.classList.toggle("is-closed", !isOpen);
+  }
+
+  update();
+  window.setInterval(update, 30000);
+}
+
 /* ---------- Start ---------- */
 
 document.addEventListener("DOMContentLoaded", function () {
   initSlideshow(document.getElementById("slideshow"));
   initHeader();
+  initOpenStatus();
 });
