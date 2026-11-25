@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,19 +16,33 @@
   <header class="site-header">
     <div class="flag-stripe" aria-hidden="true"></div>
     <div class="wrap header-bar">
-      <a class="back-link" href="../index.html">&larr; Alle Berlijn-tips</a>
-      <span class="team-badge">Berlijnse Tovernaars</span>
+      <a class="brand" href="#inhoud">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+            <line x1="16" y1="1" x2="16" y2="8" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="16" cy="12.5" r="5" fill="currentColor"/>
+            <rect x="11" y="11.6" width="10" height="1.4" fill="#c8102e"/>
+            <rect x="14.6" y="17" width="2.8" height="11" fill="currentColor"/>
+            <path d="M11 31 L14.6 27 L17.4 27 L21 31 Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Berlijnse Tovernaars</span>
+          <span class="brand-sub">Berlins Best!<span class="brand-sub-extra"> · Kunst &amp; Kultur</span></span>
+        </span>
+      </a>
+      <a class="back-btn" href="../index.html"><span aria-hidden="true">&larr;</span> Alle tips</a>
+      <nav class="page-nav" aria-label="Op deze pagina">
+        <ul>
+          <li><a href="#over">Over</a></li>
+          <li><a href="#waarom">Waarom</a></li>
+          <li><a href="#info">Info</a></li>
+          <li><a href="#route">Route</a></li>
+          <li><a href="#fotos">Foto's</a></li>
+          <li><a href="#bronnen">Bronnen</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="page-nav" aria-label="Op deze pagina">
-      <ul class="wrap">
-        <li><a href="#over">Over</a></li>
-        <li><a href="#waarom">Waarom</a></li>
-        <li><a href="#info">Info</a></li>
-        <li><a href="#route">Route</a></li>
-        <li><a href="#fotos">Foto's</a></li>
-        <li><a href="#bronnen">Bronnen</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main id="inhoud">
@@ -57,7 +70,7 @@
               </li>
               <li class="fact">
                 <span class="fact-label">Vanaf hotel</span>
-                <span class="fact-value">± 25 min · 4 km</span>
+                <span class="fact-value">24 min · S + U5</span>
               </li>
             </ul>
           </div>
@@ -168,52 +181,42 @@
     <section id="route" class="section section-alt" aria-labelledby="route-titel">
       <div class="wrap">
         <h2 id="route-titel"><span class="h-num" aria-hidden="true">04</span> Route vanaf het hotel</h2>
-        <p class="lead">Van <strong>Generator Berlin Mitte</strong> (Oranienburger Str. 65) naar het museum: <strong>ongeveer 25 minuten</strong> met het openbaar vervoer, <strong>ca. 4 km</strong>.</p>
 
-        <div class="route-layout">
-          <ol class="route-steps">
-            <li class="step step-walk">
-              <span class="step-mode">Lopen</span>
-              <p>Loop vanaf het hotel naar het oosten over de Oranienburger Straße, langs de Neue Synagoge met de gouden koepel, tot station <strong>S Hackescher Markt</strong>.</p>
-              <p class="step-meta">± 11 min · 850 m</p>
-            </li>
-            <li class="step step-train">
-              <span class="step-mode"><span class="badge badge-s" aria-hidden="true">S</span> S-Bahn</span>
-              <p>Neem een S-Bahn richting het oosten (<strong>S3, S5, S7 of S9</strong>) en stap na één halte uit op <strong>Alexanderplatz</strong>.</p>
-              <p class="step-meta">± 2 min · 1 halte · 800 m</p>
-            </li>
-            <li class="step step-metro">
-              <span class="step-mode"><span class="badge badge-u" aria-hidden="true">U</span><span class="badge badge-u5" aria-hidden="true">U5</span> U-Bahn</span>
-              <p>Stap over op de <strong>U5 richting Hönow</strong>. Rij 3 haltes (Schillingstraße, Strausberger Platz) en stap uit op <strong>Weberwiese</strong>.</p>
-              <p class="step-meta">± 5 min · 3 haltes · 2,2 km</p>
-            </li>
-            <li class="step step-walk">
-              <span class="step-mode">Lopen</span>
-              <p>Neem de uitgang aan de noordkant van de Karl-Marx-Allee en loop een klein stukje terug naar het westen. Het museum zit op nummer 93a, je herkent het aan de grote letters <strong>COMPUTERSPIELE MUSEUM</strong>.</p>
-              <p class="step-meta">± 3 min · 200 m</p>
-            </li>
-          </ol>
-
-          <div class="map-box">
-            <div id="kaart" class="map" role="region" aria-label="Interactieve kaart met het hotel, het museum en de route"></div>
-            <p class="map-legend">
-              <span class="legend-item"><span class="dot dot-hotel" aria-hidden="true"></span> Hotel</span>
-              <span class="legend-item"><span class="dot dot-museum" aria-hidden="true"></span> Museum</span>
-              <span class="legend-item"><span class="line-sample line-walk" aria-hidden="true"></span> Lopen</span>
-              <span class="legend-item"><span class="line-sample line-s" aria-hidden="true"></span> S-Bahn</span>
-              <span class="legend-item"><span class="line-sample line-u5" aria-hidden="true"></span> U5</span>
-            </p>
-            <p id="kaart-fallback" class="map-fallback" hidden>De kaart kon niet geladen worden. Bekijk de route op <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=52.5251%2C13.3915%3B52.5176%2C13.4420">OpenStreetMap</a>.</p>
-          </div>
+        <div class="route-summary">
+          <p class="route-total"><strong>24 min</strong> <span>met S-Bahn + U-Bahn</span></p>
+          <p class="route-from">Van <strong>Generator Berlin Mitte</strong> (Oranienburger Str. 65) naar het museum · kaartje AB € 4,00</p>
         </div>
 
-        <div class="alternatives">
-          <h3>Liever anders?</h3>
-          <ul>
-            <li><strong>Lopen:</strong> ± 48 minuten (3,8 km), via Alexanderplatz en de Karl-Marx-Allee. Je ziet dan meteen de Fernsehturm en de DDR-flats.</li>
-            <li><strong>Fiets:</strong> ± 15 minuten. Vlak voor het museum staat een station van nextbike en er zijn fietsenrekken.</li>
-          </ul>
+        <ol class="route-steps">
+          <li class="step">
+            <span class="step-icon step-icon-walk" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" focusable="false"><circle cx="13.5" cy="3.6" r="2.2" fill="currentColor"/><path d="M12.2 7 L9 12.8 L10.8 13.7 L12.6 10.6 L13.6 14.6 L11 21.2 L13.1 21.9 L15.7 15.2 L15 11.6 L16.9 13.6 L18.4 12.5 L15.3 8.3 Z M9.7 15.2 L7.6 21.2 L9.7 21.9 L11.4 17.3 Z" fill="currentColor"/></svg></span>
+            <p><strong>Loop naar S Oranienburger Straße</strong> <span class="step-time">2 min</span></p>
+            <p class="step-sub">Het station is vlak naast het hotel.</p>
+          </li>
+          <li class="step">
+            <span class="badge badge-s" aria-hidden="true">S</span>
+            <p><strong>S1, S2 of S26 → Brandenburger Tor</strong> <span class="step-time">3 min</span></p>
+            <p class="step-sub">2 haltes, richting zuiden.</p>
+          </li>
+          <li class="step">
+            <span class="badge badge-u5" aria-hidden="true">U5</span>
+            <p><strong>U5 richting Hönow → Weberwiese</strong> <span class="step-time">10 min</span></p>
+            <p class="step-sub">Overstappen op hetzelfde station, 7 haltes.</p>
+          </li>
+          <li class="step">
+            <span class="step-icon step-icon-goal" aria-hidden="true">M</span>
+            <p><strong>Loop naar Karl-Marx-Allee 93a</strong> <span class="step-time">3 min</span></p>
+            <p class="step-sub">Let op de grote letters COMPUTERSPIELE MUSEUM.</p>
+          </li>
+        </ol>
+
+        <div class="map-box">
+          <iframe class="map" title="Google Maps: route met het openbaar vervoer van Generator Berlin Mitte naar het Computerspielemuseum" src="https://maps.google.com/maps?saddr=Oranienburger+Str.+65,+10117+Berlin&amp;daddr=Karl-Marx-Allee+93a,+10243+Berlin&amp;dirflg=r&amp;hl=nl&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <p class="map-note">De kaart toont live alle OV-opties. Soms licht Google een andere route uit dan hierboven; de stappen hierboven zijn de snelste. Tik op de knop voor de actuele vertrektijden.</p>
+          <a class="map-button" href="https://www.google.com/maps/dir/?api=1&amp;origin=Generator+Berlin+Mitte,+Oranienburger+Str.+65,+10117+Berlin&amp;destination=Computerspielemuseum,+Karl-Marx-Allee+93a,+10243+Berlin&amp;travelmode=transit">Open de route in Google Maps &rarr;</a>
         </div>
+
+        <p class="alternatives"><strong>Liever lopen?</strong> Dat duurt ± 55 minuten (3,9 km), maar je komt langs Alexanderplatz, de Fernsehturm en de DDR-flats van de Karl-Marx-Allee. <strong>Fiets:</strong> vlak voor het museum staat een station van nextbike.</p>
       </div>
     </section>
 
@@ -301,7 +304,7 @@
               <li>Computerspielemuseum, <a href="https://www.computerspielemuseum.de/Besuch/6-Anfahrt.htm">Anfahrt</a> (bereikbaarheid).</li>
               <li>visitBerlin, <a href="https://www.visitberlin.de/de/computerspielemuseum">Computerspielemuseum</a> (controle openingstijden).</li>
               <li>VBB, <a href="https://www.vbb.de/news/neue-fahrpreise-im-vbb-ab-1-januar-2026/">Neue Fahrpreise ab 1. Januar 2026</a> (prijs OV-kaartje).</li>
-              <li>Kaart: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bijdragers, met <a href="https://leafletjs.com/">Leaflet</a>. Route en reistijden: eigen berekening op de OpenStreetMap-kaart.</li>
+              <li>Kaart, route en reistijden: <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Generator+Berlin+Mitte,+Oranienburger+Str.+65,+10117+Berlin&amp;destination=Computerspielemuseum,+Karl-Marx-Allee+93a,+10243+Berlin&amp;travelmode=transit">Google Maps</a> (OV-route op een doordeweekse middag). Kaartgegevens &copy; Google.</li>
             </ul>
           </div>
           <div>
@@ -334,7 +337,6 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="js/script.js"></script>
 </body>
 </html>

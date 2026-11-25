@@ -7,7 +7,7 @@ Hotel: Generator Berlin Mitte, Oranienburger Str. 65, 10117 Berlin.
 - **Waarom interessant voor CSD-studenten:** Wij leren software maken, en hier zie je waar interactieve software vandaan komt: van *Pong* en *Computer Space* tot moderne consoles. Je ziet hoe hardwarebeperkingen het ontwerp van games bepaalden en hoe interfaces (joysticks, controllers, Power Glove) zich ontwikkelden. Het is een museum waar je vooral zelf dingen doet in plaats van alleen kijkt. Het verhaal van de N-Gage laat ook zien dat een product kan mislukken door slecht productontwerp.
 - **Open tussen 2 en 5 november?** Ja. Het museum is elke dag open van 10:00 tot 20:00 uur (ma 2/11 t/m do 5/11 allemaal open). Je komt binnen in tijdvakken; een ticket geldt voor de gekozen tijd + 15 minuten.
 - **Kosten:** € 12 normaal, **€ 8 met studentenkaart** (Studierende / Schüler*innen / Azubis). Groepen vanaf 7 personen moeten zich aanmelden.
-- **Afstand vanaf het hotel:** ca. 4 km. Met S-Bahn (Hackescher Markt → Alexanderplatz) en daarna U5 naar Weberwiese ongeveer 25 minuten. Lopen duurt ongeveer 45 minuten.
+- **Afstand vanaf het hotel:** ca. 4 km. Volgens Google Maps 24 minuten: S1/S2/S26 vanaf S Oranienburger Straße (naast het hotel) naar Brandenburger Tor, daarna U5 naar Weberwiese. Lopen duurt ongeveer 55 minuten.
 - **Bronnen (links):**
   - https://www.computerspielemuseum.de/Besuch/18-Besucherinfo.htm (openingstijden)
   - https://www.computerspielemuseum.de/Tickets/3-Eintritt.htm (prijzen)

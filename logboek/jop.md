@@ -30,8 +30,8 @@ Wat ga ik de volgende les doen?
 Wat heb ik vandaag gedaan?
 - Gespreksleider bij de taakverdeling. Ik doe **omschrijving + motivatie**, **praktische informatie** en **route + kaart**.
 - Teksten in eigen woorden geschreven op basis van de officiële museumsite.
-- De route uitgezocht: lopen naar S Hackescher Markt → S-Bahn naar Alexanderplatz → U5 naar Weberwiese → 3 min lopen. In totaal ca. 25 min en ca. 4 km.
-- De interactieve kaart gebouwd met Leaflet en OpenStreetMap: markers voor het hotel en het museum, en een gestippelde routelijn.
+- De route uitgezocht in Google Maps: 2 min lopen naar S Oranienburger Straße → S1/S2/S26 naar Brandenburger Tor → U5 naar Weberwiese → 3 min lopen. In totaal 24 min, kaartje AB € 4,00.
+- De interactieve kaart toegevoegd: een Google Maps-kaart (iframe) met de OV-route van het hotel naar het museum, en een knop die de route opent in de Google Maps-app.
 - Twee afbeeldingen gezocht en met bron, maker en licentie genoteerd.
 
 Met wie heb ik samengewerkt, en waaraan?

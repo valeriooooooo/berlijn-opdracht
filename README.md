@@ -21,7 +21,7 @@ Klas 3CSD-WDV2 · Module 9.2 *Berlins Best!* · excursie Berlijn 2–5 november
 | --- | --- |
 | Interessant voor CSD-studenten | Ja: het museum laat de geschiedenis van games, hardware en software zien. Je kunt er zelf oude games spelen en ziet hoe interactie en interfaces zijn ontstaan. Dat sluit direct aan bij onze opleiding. |
 | Open tussen 2 en 5 november | Ja: dagelijks open van 10:00 tot 20:00 uur, ook op maandag. Je kunt dus na het groepsprogramma nog gaan. |
-| Bereikbaar vanaf het hotel | Ja: ongeveer 25 minuten met S-Bahn + U5 (circa 4 km), zonder lastige overstappen. |
+| Bereikbaar vanaf het hotel | Ja: 24 minuten volgens Google Maps. De S-Bahn vertrekt naast het hotel, en je stapt één keer over op de U5 (Brandenburger Tor). |
 | Betaalbaar | Ja: € 8 met studentenkaart (normaal € 12). |
 | Genoeg informatie en beeldmateriaal | Ja: de officiële website is uitgebreid en op Wikimedia Commons staan veel foto's met een vrije licentie. |
 
