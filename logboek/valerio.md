@@ -6,7 +6,7 @@ Wat heb ik vandaag gedaan?
 - Teamstart: ik stelde de groepsnaam "Berlijnse Tovernaars" voor en we kozen hem samen. Ik was gespreksleider bij de teamstart en bij overleg 2.
 - De repository aangemaakt, Jop als collaborator toegevoegd en `README.md` en `teamverslag.md` uit de templates gezet.
 - Twee locaties onderzocht (`onderzoek/valerio.md`): het **Computerspielemuseum** en de **East Side Gallery**. Openingstijden en prijzen heb ik op de officiële museumsite gecontroleerd. Op reisblogs stonden oude prijzen.
-- Mijn ontwerp gemaakt in **Claude Artifacts** (`ontwerpen/valerio-claude-artifacts.png`), mobile first in retro-arcadestijl.
+- Mijn ontwerp gemaakt in **Claude Artifacts** (`ontwerpen/valerio-claude-artifacts.png`), mobile first in een Berlijnse stijl (beton, affiches, kleuren van de stadsvlag en de BVG).
 - Ervaring met de tool: **goed:** in een paar minuten had ik een werkend voorbeeld met echte HTML/CSS, dat ik meteen in de browser kon bekijken. Kleuren en lettertype aanpassen ging snel met een korte prompt. **Lastig:** de tool verzint soms zelf feiten (een verkeerde prijs), dus alles moet je nakijken. Het lukt ook niet altijd om precies één ding aan te passen zonder dat er iets anders verandert.
 
 Met wie heb ik samengewerkt, en waaraan?
@@ -40,7 +40,7 @@ Wat heb ik bijgedragen aan het team?
 - Het "skelet" van de pagina en de CSS-variabelen voor kleuren en lettertypes, zodat Jop dezelfde stijl kon gebruiken.
 
 Wat heb ik van een teamlid geleerd of gekregen?
-- Jop liet zien hoe je met Leaflet een eigen marker (divIcon) maakt, zodat de kaartpinnen in onze pixelstijl passen.
+- Jop liet zien hoe je met Leaflet een eigen marker (divIcon) maakt, zodat de kaartpinnen bij onze stijl passen. Ook leerde ik hoe je de route in stukken tekent, elk in de kleur van het vervoermiddel (S-Bahn groen, U5 bruin).
 
 Hoe ging de samenwerking? Wat ging goed, wat kan beter?
 - Goed: doordat we in verschillende bestanden/secties werkten, hadden we geen merge-conflicten.

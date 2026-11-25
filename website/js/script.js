@@ -182,20 +182,29 @@ function initMap() {
   const hotel = [52.5251, 13.3915];
   const museum = [52.5176, 13.4420];
 
-  // Globale route: lopen → S-Bahn → U5 → lopen
-  const route = [
-    hotel,
-    [52.5243, 13.3950],
-    [52.5236, 13.3990],
-    [52.5232, 13.4012],
-    [52.5226, 13.4024], // S Hackescher Markt
-    [52.5217, 13.4072],
-    [52.5216, 13.4113], // S Alexanderplatz
-    [52.5218, 13.4133], // U Alexanderplatz (U5)
-    [52.5203, 13.4219], // U Schillingstraße
-    [52.5180, 13.4325], // U Strausberger Platz
-    [52.5170, 13.4426], // U Weberwiese
-    museum
+  // Globale route in vier stukken, elk in de kleur van het vervoermiddel
+  const hackescherMarkt = [52.5226, 13.4024];
+  const alexS = [52.5216, 13.4113];
+  const alexU = [52.5218, 13.4133];
+  const weberwiese = [52.5170, 13.4426];
+
+  const segments = [
+    { // lopen naar S Hackescher Markt
+      points: [hotel, [52.5243, 13.3950], [52.5236, 13.3990], [52.5232, 13.4012], hackescherMarkt],
+      style: { color: "#141414", weight: 5, dashArray: "2 9", lineCap: "round" }
+    },
+    { // S-Bahn naar Alexanderplatz
+      points: [hackescherMarkt, [52.5217, 13.4072], alexS],
+      style: { color: "#008d4f", weight: 7 }
+    },
+    { // overstappen + U5 naar Weberwiese
+      points: [alexS, alexU, [52.5203, 13.4219], [52.5180, 13.4325], weberwiese],
+      style: { color: "#7e5330", weight: 7 }
+    },
+    { // lopen naar het museum
+      points: [weberwiese, museum],
+      style: { color: "#141414", weight: 5, dashArray: "2 9", lineCap: "round" }
+    }
   ];
 
   const map = L.map(mapEl, {
@@ -225,14 +234,13 @@ function initMap() {
     .addTo(map)
     .bindPopup("<strong>Computerspielemuseum</strong><br>Karl-Marx-Allee 93a<br>Dagelijks 10:00 – 20:00");
 
-  const line = L.polyline(route, {
-    color: "#ff5fae",
-    weight: 5,
-    opacity: 0.9,
-    dashArray: "10 8"
-  }).addTo(map);
+  const routeGroup = L.featureGroup();
+  segments.forEach(function (segment) {
+    L.polyline(segment.points, segment.style).addTo(routeGroup);
+  });
+  routeGroup.addTo(map);
 
-  map.fitBounds(line.getBounds(), { padding: [30, 30] });
+  map.fitBounds(routeGroup.getBounds(), { padding: [30, 30] });
 
   // Scrollen met het muiswiel pas na klikken, zodat je niet "vast" komt te zitten
   map.on("click", function () {

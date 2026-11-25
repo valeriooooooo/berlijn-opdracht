@@ -56,10 +56,11 @@
 **Aanwezig:** Valerio, Jop
 
 **Welk ontwerp kiezen we, en waarom?**
-We kiezen **ontwerp A (Valerio, "retro arcade")**: een donkere achtergrond met neonkleuren (magenta, cyaan, geel) en pixel-koppen. Waarom:
-- Het past direct bij de locatie (arcadehal uit de jaren 80) en springt eruit tussen de andere pagina's van de site.
+We kiezen **ontwerp A (Valerio, "Berlijnse stijl")**: een lichte betonachtergrond met blokken als geplakte affiches. De kleuren komen uit de stad zelf: rood-wit-rood van de Berlijnse vlag, zwart en BVG-geel van de OV-borden, en groen (S-Bahn) en bruin (U5) voor de route. De koppen staan in een smal hoofdletterfont (Bebas Neue), zoals op affiches en stationsborden. Waarom:
+- Het geheel is een pagina in een gezamenlijke **Berlijn**-website. Met deze stijl voel je meteen dat het over Berlijn gaat en past de pagina bij die van de andere groepjes. Een "game-stijl" zou alleen bij het museum passen, niet bij de stad.
+- De route ziet eruit als een lijnenkaart met echte S- en U5-badges, zodat je in Berlijn dezelfde kleuren en borden herkent.
 - Het is mobile-first ontworpen: één kolom en grote knoppen voor de slideshow, die je ook met je duim kunt bedienen.
-- De praktische info staat bovenaan in drie "kaarten" (adres, open, prijs), zodat je in Berlijn snel ziet wat je moet weten.
+- De praktische info staat bovenaan op een zwart-geel "vertrekbord" (adres, open, prijs, reistijd), zodat je in Berlijn snel ziet wat je moet weten.
 
 Uit ontwerp B nemen we over: de **routestappen als genummerde lijst met icoontjes** en de "tip"-blokjes.
 
@@ -86,7 +87,7 @@ Omdat we maar met twee zijn, hebben we de vijf onderdelen samengevoegd tot twee 
 **Hoe hebben we de afbeeldingen op elkaar afgestemd?**
 - **Bron/licentie:** alleen foto's van Wikimedia Commons met een vrije licentie (CC BY, CC BY-SA). Per foto noteren we maker en licentie in `onderzoek/` en op de pagina.
 - **Verhouding:** alles liggend en bijgesneden tot **3:2 (1200 × 800 px)**, zodat de slideshow niet verspringt. Staande foto's (Space Invaders, Pole Position) vielen daarom af.
-- **Kleur/stijl:** we kozen foto's met veel kleur: de lime-groene vitrines, de oranje woonkamers en het rode licht van de PainStation. Die passen bij de neonkleuren van het ontwerp. Bijna alle foto's komen van binnen het museum, met één buitenfoto als opening.
+- **Kleur/stijl:** we kozen foto's met veel kleur: de lime-groene vitrines, de oranje woonkamers en het rode licht van de PainStation. Die vormen een levendig contrast met de rustige beton-, zwart- en roodtinten van het ontwerp. Bijna alle foto's komen van binnen het museum, met één buitenfoto als opening.
 - **Kwaliteit en web:** scherpe originelen van minimaal 2000 px, verkleind en gecomprimeerd tot **75–275 KB per stuk** (max. 300 KB).
 - **Volgorde:** eerst buiten, dan de woonkamers (jaren 70 → 80), dan de PainStation, de Wall of Hardware en losse klassiekers. Zo "loop" je als het ware door het museum.
 

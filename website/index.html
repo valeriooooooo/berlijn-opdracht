@@ -7,7 +7,7 @@
   <meta name="description" content="Tip voor CSD-, XR- en GD-studenten in Berlijn: het Computerspielemuseum aan de Karl-Marx-Allee. Omschrijving, openingstijden, prijzen, route vanaf het hotel, kaart en foto's.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,6 +15,7 @@
   <a class="skip-link" href="#inhoud">Ga direct naar de inhoud</a>
 
   <header class="site-header">
+    <div class="flag-stripe" aria-hidden="true"></div>
     <div class="wrap header-bar">
       <a class="back-link" href="../index.html">&larr; Alle Berlijn-tips</a>
       <span class="team-badge">Berlijnse Tovernaars</span>
@@ -33,29 +34,38 @@
 
   <main id="inhoud">
     <section class="hero" aria-labelledby="titel">
-      <div class="wrap">
-        <p class="category">Kunst &amp; cultuur</p>
-        <h1 id="titel">Computer&shy;spiele&shy;museum</h1>
-        <p class="tagline">Speel je in één middag door vijftig jaar gamegeschiedenis, van <em>Pong</em> tot PlayStation.</p>
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="category">Kunst &amp; Kultur · Berlin-Friedrichshain</p>
+          <h1 id="titel"><span class="title-line">Computer&shy;spiele</span><span class="title-line title-red">museum</span></h1>
+          <p class="tagline">Speel je in één middag door vijftig jaar gamegeschiedenis, van <em>Pong</em> tot PlayStation, midden op de Karl-Marx-Allee.</p>
 
-        <ul class="quick-facts">
-          <li class="fact fact-pink">
-            <span class="fact-label">Waar</span>
-            <span class="fact-value">Karl-Marx-Allee 93a</span>
-          </li>
-          <li class="fact fact-cyan">
-            <span class="fact-label">Open</span>
-            <span class="fact-value">Dagelijks 10–20 uur</span>
-          </li>
-          <li class="fact fact-yellow">
-            <span class="fact-label">Student</span>
-            <span class="fact-value">€&nbsp;8 <small>(i.p.v. €&nbsp;12)</small></span>
-          </li>
-          <li class="fact fact-lime">
-            <span class="fact-label">Vanaf hotel</span>
-            <span class="fact-value">± 25 min · 4 km</span>
-          </li>
-        </ul>
+          <div class="board" role="group" aria-labelledby="board-title">
+            <p class="board-head"><span id="board-title">In het kort</span> <span class="board-line" aria-hidden="true">U5</span></p>
+            <ul class="quick-facts">
+              <li class="fact">
+                <span class="fact-label">Waar</span>
+                <span class="fact-value">Karl-Marx-Allee 93a</span>
+              </li>
+              <li class="fact">
+                <span class="fact-label">Open</span>
+                <span class="fact-value">Dagelijks 10–20 uur</span>
+              </li>
+              <li class="fact">
+                <span class="fact-label">Student</span>
+                <span class="fact-value">€&nbsp;8 <small>(i.p.v. €&nbsp;12)</small></span>
+              </li>
+              <li class="fact">
+                <span class="fact-label">Vanaf hotel</span>
+                <span class="fact-value">± 25 min · 4 km</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="img/museum-buitenkant.jpg" width="1200" height="800" alt="De stenen gevel van het Computerspielemuseum aan de Karl-Marx-Allee met boven de ingang de grote letters COMPUTERSPIELE MUSEUM.">
+          <figcaption>Karl-Marx-Allee 93a · Foto: Marcin Wichary, CC BY 2.0</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -168,12 +178,12 @@
               <p class="step-meta">± 11 min · 850 m</p>
             </li>
             <li class="step step-train">
-              <span class="step-mode">S-Bahn</span>
+              <span class="step-mode"><span class="badge badge-s" aria-hidden="true">S</span> S-Bahn</span>
               <p>Neem een S-Bahn richting het oosten (<strong>S3, S5, S7 of S9</strong>) en stap na één halte uit op <strong>Alexanderplatz</strong>.</p>
               <p class="step-meta">± 2 min · 1 halte · 800 m</p>
             </li>
             <li class="step step-metro">
-              <span class="step-mode">U-Bahn</span>
+              <span class="step-mode"><span class="badge badge-u" aria-hidden="true">U</span><span class="badge badge-u5" aria-hidden="true">U5</span> U-Bahn</span>
               <p>Stap over op de <strong>U5 richting Hönow</strong>. Rij 3 haltes (Schillingstraße, Strausberger Platz) en stap uit op <strong>Weberwiese</strong>.</p>
               <p class="step-meta">± 5 min · 3 haltes · 2,2 km</p>
             </li>
@@ -187,9 +197,11 @@
           <div class="map-box">
             <div id="kaart" class="map" role="region" aria-label="Interactieve kaart met het hotel, het museum en de route"></div>
             <p class="map-legend">
-              <span class="dot dot-hotel" aria-hidden="true"></span> Hotel
-              <span class="dot dot-museum" aria-hidden="true"></span> Museum
-              <span class="line-sample" aria-hidden="true"></span> Route (globaal)
+              <span class="legend-item"><span class="dot dot-hotel" aria-hidden="true"></span> Hotel</span>
+              <span class="legend-item"><span class="dot dot-museum" aria-hidden="true"></span> Museum</span>
+              <span class="legend-item"><span class="line-sample line-walk" aria-hidden="true"></span> Lopen</span>
+              <span class="legend-item"><span class="line-sample line-s" aria-hidden="true"></span> S-Bahn</span>
+              <span class="legend-item"><span class="line-sample line-u5" aria-hidden="true"></span> U5</span>
             </p>
             <p id="kaart-fallback" class="map-fallback" hidden>De kaart kon niet geladen worden. Bekijk de route op <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&amp;route=52.5251%2C13.3915%3B52.5176%2C13.4420">OpenStreetMap</a>.</p>
           </div>
